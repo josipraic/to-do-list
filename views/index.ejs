@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=FONZ" rel="stylesheet">
+</head>
+<body>
+
+<body>
+<div class="header">
+    <h1>To do list</h1>
+</div>
+
+<div class="links-div">
+    <h2>To do</h2>
+    <h2>Groceries</h2>
+</div>
+
+<div class="parent_container">
+<ul class="flex-container">
+    <% dataList.forEach(function(item) { %>
+        <div class="flex-item">
+            <li><%= item %></li>
+        </div>
+    <% }); %>
+</ul>
+</div>
+<form action="/yourRoute" method="POST" class="form">
+    <input type="text" id="textInput" name="textInput" autocomplete="off">
+    <button type="submit" class="submitButton">Add</button>
+</form>
+
+    <script src="js/index.js" charset="utf-8"></script>
+</body>
+</html>
